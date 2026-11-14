@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PhoneCam</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="phone">
+  <main>
+    <header>
+      <h1>PhoneCam</h1>
+      <span id="status" class="status">Not paired</span>
+    </header>
+
+    <section id="pairView" class="card">
+      <label for="code">Pairing code (shown in the PC window)</label>
+      <input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off" placeholder="000000">
+      <button id="pairBtn" class="primary">Connect</button>
+    </section>
+
+    <section id="camView" class="hidden">
+      <video id="preview" autoplay muted playsinline></video>
+      <div id="stats" class="stats"></div>
+
+      <div class="card controls">
+        <label>Camera <select id="camera"></select></label>
+        <label>Resolution
+          <select id="resolution">
+            <option value="1280x720">720p</option>
+            <option value="1920x1080" selected>1080p</option>
+          </select>
+        </label>
+        <label>FPS
+          <select id="fps">
+            <option value="30" selected>30</option>
+            <option value="60">60</option>
+          </select>
+        </label>
+        <label>Bitrate
+          <select id="bitrate">
+            <option value="4000">4 Mbps</option>
+            <option value="8000" selected>8 Mbps</option>
+            <option value="12000">12 Mbps</option>
+          </select>
+        </label>
+      </div>
+
+      <button id="liveBtn" class="primary big">Start streaming</button>
+      <p class="hint">Keep Safari open with the screen on while streaming.</p>
+    </section>
+  </main>
+  <script src="/phone.js"></script>
+</body>
+</html>

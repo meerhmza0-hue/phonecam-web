@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+.hidden { display: none !important; }
+
+/* ---------- OBS viewer ---------- */
+body.viewer { margin: 0; background: transparent; overflow: hidden; }
+body.viewer video { position: fixed; inset: 0; width: 100vw; height: 100vh; object-fit: contain; background: transparent; }
+.info { position: fixed; left: 12px; bottom: 12px; padding: 6px 10px; border-radius: 6px;
+        background: rgba(0,0,0,.6); color: #fff; font: 14px system-ui, sans-serif; }
+
+/* ---------- Phone page ---------- */
+body.phone {
+  margin: 0; min-height: 100vh; background: #0f1115; color: #e8eaed;
+  font: 16px -apple-system, system-ui, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main { max-width: 560px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+h1 { font-size: 22px; margin: 0; }
+
+.status { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: #2a2e36; }
+.status.live { background: #c62828; color: #fff; font-weight: 700; }
+.status.warn { background: #8a6d00; color: #fff; }
+.status.bad  { background: #6b1f1f; color: #fff; }
+
+.card { background: #181b21; border: 1px solid #2a2e36; border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+label { display: block; font-size: 14px; color: #aab0bb; }
+input, select {
+  width: 100%; margin-top: 6px; padding: 12px; font-size: 17px; color: #e8eaed;
+  background: #0f1115; border: 1px solid #2a2e36; border-radius: 8px;
+}
+#code { letter-spacing: 6px; text-align: center; font-size: 24px; margin-bottom: 12px; }
+
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.controls label:first-child { grid-column: 1 / -1; }
+
+button { width: 100%; padding: 14px; font-size: 17px; border: 0; border-radius: 10px; color: #fff; background: #2a2e36; }
+button.primary { background: #1a73e8; }
+button.big { padding: 18px; font-size: 19px; font-weight: 600; }
+button.stop { background: #c62828; }
+
+#preview { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; object-fit: contain; }
+.stats { min-height: 20px; margin: 6px 0 10px; font-size: 13px; color: #aab0bb; text-align: center; }
+.hint { font-size: 13px; color: #7d8590; text-align: center; }
