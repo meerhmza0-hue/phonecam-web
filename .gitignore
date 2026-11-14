@@ -1,0 +1,9 @@
+# Locally generated TLS certificate and private key - never commit
+certs/
+*.pem
+*.pfx
+*.key
+
+node_modules/
+.DS_Store
+Thumbs.db
